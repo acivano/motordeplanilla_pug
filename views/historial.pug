@@ -1,0 +1,18 @@
+h2(style='color:crimson;') Productos - Pug 
+    if(productos.length > 0)
+        table(class='table')
+            thead
+                tr
+                    th(scope='col') Titulo
+                    th(scope='col') Precio
+                    th(scope='col') url
+            tbody
+                each producto in productos
+                    tr
+                        td= producto.Titulo
+                        td= producto.Precio
+                        td= producto.url
+    else
+        h3(class='alert alert-danger') No se encontraron datos
+div 
+    a(href='/' class='btn btn-primary btn-lg active float-right' role='button' aria-pressed='true') Agregar producto
